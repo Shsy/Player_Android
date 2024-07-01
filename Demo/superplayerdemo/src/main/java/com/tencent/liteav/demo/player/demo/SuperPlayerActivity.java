@@ -704,46 +704,53 @@ public class SuperPlayerActivity extends FragmentActivity implements View.OnClic
         mSuperPlayerView.playWithModelListNeedLicence(superPlayerModelList, true, 0);
     }
 
-    private void playVideoModel(VideoModel videoModel) {
-        mSuperPlayerView.setQualityVisible(true);
-        final SuperPlayerModel superPlayerModelV3 = new SuperPlayerModel();
-        superPlayerModelV3.appId = videoModel.appid;
-        superPlayerModelV3.vipWatchMode = videoModel.vipWatchModel;
-        if (videoModel.dynamicWaterConfig != null) {
-            superPlayerModelV3.dynamicWaterConfig = videoModel.dynamicWaterConfig;
-        }
-        if (!TextUtils.isEmpty(videoModel.videoURL)) {
-            if (isSuperPlayerVideo(videoModel)) {
-                playSuperPlayerVideo(videoModel);
-                return;
-            } else {
-                superPlayerModelV3.title = videoModel.title;
-                superPlayerModelV3.url = videoModel.videoURL;
-            }
-        }
-        if (videoModel.multiVideoURLs != null && videoModel.multiVideoURLs.size() > 0) {
-            superPlayerModelV3.multiURLs = new ArrayList<>();
-            for (VideoModel.VideoPlayerURL modelURL : videoModel.multiVideoURLs) {
-                superPlayerModelV3.multiURLs.add(new SuperPlayerModel.SuperPlayerURL(modelURL.url, modelURL.title));
-            }
-        }
-
-        if (!TextUtils.isEmpty(videoModel.fileid)) {
-            superPlayerModelV3.videoId = new SuperPlayerVideoId();
-            superPlayerModelV3.videoId.fileId = videoModel.fileid;
-            superPlayerModelV3.videoId.pSign = videoModel.pSign;
-        }
-        superPlayerModelV3.playDefaultIndex = videoModel.playDefaultIndex;
-        superPlayerModelV3.subtitleSourceModelList = videoModel.subtitleSourceModelList;
-        superPlayerModelV3.title = videoModel.title;
-        superPlayerModelV3.playAction = videoModel.playAction;
-        superPlayerModelV3.placeholderImage = videoModel.placeholderImage;
-        superPlayerModelV3.coverPictureUrl = videoModel.coverPictureUrl;
-        superPlayerModelV3.duration = videoModel.duration;
-        superPlayerModelV3.videoQualityList = videoModel.videoQualityList;
-        superPlayerModelV3.isEnableCache = videoModel.isEnableDownload;
-        mSuperPlayerView.playWithModelNeedLicence(superPlayerModelV3);
+    private void playVideoModel(VideoModel videoModel){
+        SuperPlayerModel superPlayerModel = new SuperPlayerModel();
+        superPlayerModel.appId = 1257745764;
+        superPlayerModel.url = "http://1257745764.vod2.myqcloud.com/d7e24a52vodcq1257745764/10b8446e1253642696791152389/uQvMe41FTwEA.mp4";
+        mSuperPlayerView.playWithModelNeedLicence(superPlayerModel);
     }
+
+//    private void playVideoModel(VideoModel videoModel) {
+//        mSuperPlayerView.setQualityVisible(true);
+//        final SuperPlayerModel superPlayerModelV3 = new SuperPlayerModel();
+//        superPlayerModelV3.appId = videoModel.appid;
+//        superPlayerModelV3.vipWatchMode = videoModel.vipWatchModel;
+//        if (videoModel.dynamicWaterConfig != null) {
+//            superPlayerModelV3.dynamicWaterConfig = videoModel.dynamicWaterConfig;
+//        }
+//        if (!TextUtils.isEmpty(videoModel.videoURL)) {
+//            if (isSuperPlayerVideo(videoModel)) {
+//                playSuperPlayerVideo(videoModel);
+//                return;
+//            } else {
+//                superPlayerModelV3.title = videoModel.title;
+//                superPlayerModelV3.url = videoModel.videoURL;
+//            }
+//        }
+//        if (videoModel.multiVideoURLs != null && videoModel.multiVideoURLs.size() > 0) {
+//            superPlayerModelV3.multiURLs = new ArrayList<>();
+//            for (VideoModel.VideoPlayerURL modelURL : videoModel.multiVideoURLs) {
+//                superPlayerModelV3.multiURLs.add(new SuperPlayerModel.SuperPlayerURL(modelURL.url, modelURL.title));
+//            }
+//        }
+//
+//        if (!TextUtils.isEmpty(videoModel.fileid)) {
+//            superPlayerModelV3.videoId = new SuperPlayerVideoId();
+//            superPlayerModelV3.videoId.fileId = videoModel.fileid;
+//            superPlayerModelV3.videoId.pSign = videoModel.pSign;
+//        }
+//        superPlayerModelV3.playDefaultIndex = videoModel.playDefaultIndex;
+//        superPlayerModelV3.subtitleSourceModelList = videoModel.subtitleSourceModelList;
+//        superPlayerModelV3.title = videoModel.title;
+//        superPlayerModelV3.playAction = videoModel.playAction;
+//        superPlayerModelV3.placeholderImage = videoModel.placeholderImage;
+//        superPlayerModelV3.coverPictureUrl = videoModel.coverPictureUrl;
+//        superPlayerModelV3.duration = videoModel.duration;
+//        superPlayerModelV3.videoQualityList = videoModel.videoQualityList;
+//        superPlayerModelV3.isEnableCache = videoModel.isEnableDownload;
+//        mSuperPlayerView.playWithModelNeedLicence(superPlayerModelV3);
+//    }
 
     private boolean playSuperPlayerVideo(VideoModel videoModel) {
         mSuperPlayerView.setQualityVisible(true);

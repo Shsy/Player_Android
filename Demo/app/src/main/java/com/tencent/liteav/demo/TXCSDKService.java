@@ -11,8 +11,9 @@ public class TXCSDKService {
     // Please refer to the official website guide for how to obtain the
     // license: https://cloud.tencent.com/document/product/454/34750
     // 如何获取License? 请参考官网指引 https://cloud.tencent.com/document/product/454/34750
-    private static final String licenceUrl = "Please replace it with your licenseUrl";
-    private static final String licenseKey = "Please replace it with your licenseKey";
+    private static final String licenceUrl = "https://license.vod2.myqcloud.com/license/v2/1253878382_1/v_cube.license";
+    private static final String licenseKey = "16b63890172d0c5b315b61e9a36c3918";
+
 
     private TXCSDKService() {
     }

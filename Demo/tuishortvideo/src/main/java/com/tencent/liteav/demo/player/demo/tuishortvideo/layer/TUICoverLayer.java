@@ -86,7 +86,7 @@ public class TUICoverLayer extends TUIBaseLayer {
     public void onViewRecycled(TUIBaseVideoView videoView) {
         super.onViewRecycled(videoView);
         // clear image bitmap when page itemView recycled
-        Glide.with(videoView.getContext()).clear(getView());
+        Glide.with(videoView.getContext()).clear((View)getView());
     }
 
     private void loadCover() {
