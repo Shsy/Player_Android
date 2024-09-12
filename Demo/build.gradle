@@ -18,6 +18,10 @@ allprojects {
             dirs 'libs'
             dirs project(':app').file('libs')
         }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/'}
+        maven { url 'https://maven.aliyun.com/repository/jcenter/'}
+
         maven { url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
         maven { url "https://mirrors.tencent.com/repository/maven/YoutuEntertainment" }
         maven { url "https://mirrors.tencent.com/repository/maven/thirdparty" }

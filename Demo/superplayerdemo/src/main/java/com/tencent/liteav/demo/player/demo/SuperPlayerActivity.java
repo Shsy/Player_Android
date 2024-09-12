@@ -707,7 +707,7 @@ public class SuperPlayerActivity extends FragmentActivity implements View.OnClic
     private void playVideoModel(VideoModel videoModel){
         SuperPlayerModel superPlayerModel = new SuperPlayerModel();
         superPlayerModel.appId = 1257745764;
-        superPlayerModel.url = "http://1257745764.vod2.myqcloud.com/d7e24a52vodcq1257745764/10b8446e1253642696791152389/uQvMe41FTwEA.mp4";
+        superPlayerModel.url = "http://1257745764.vod2.myqcloud.com/d7e24a52vodcq1257745764/af4a14e81397757892201680125/p8YvbtbA3MoA.mp4";
         mSuperPlayerView.playWithModelNeedLicence(superPlayerModel);
     }
 
